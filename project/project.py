@@ -25,6 +25,8 @@ def add_pass():
  try:
   with open(os.path.expandvars(r"%USERPROFILE%\desktop\YOUR_PASS.txt"),"a",encoding="utf-8") as f5:
               print(fr"Соцсеть: {input3.text()}, Пароль: {input2.text()}", "\n",file=f5,flush=True)
+              input2.clear()
+              input3.clear()
   path = os.path.expandvars(r"%USERPROFILE%\desktop\YOUR_PASS.txt")
   if os.path.exists(path):
     os.chmod(path, stat.S_IWRITE)
